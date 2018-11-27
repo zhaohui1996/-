@@ -1,0 +1,42 @@
+|ERROR|2018-11-16 17:55:16,048|Exception on /sell/form [POST]
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 23, in test
+    trade_main(data)
+  File "./trade_functions.py", line 255, in trade_main
+    open_buy(symbol, amount, limit, stop)
+  File "./trade_functions.py", line 67, in open_buy
+    res = con.open_trade(symbol=symbol, amount=amount, is_buy=True, is_in_pips=False, time_in_force='GTC', order_type='AtMarket', limit=limit, stop=stop)
+NameError: name 'con' is not defined
+|ERROR|2018-11-16 17:55:26,135|Exception on /sell/form [POST]
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/python3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 23, in test
+    trade_main(data)
+  File "./trade_functions.py", line 255, in trade_main
+    open_buy(symbol, amount, limit, stop)
+  File "./trade_functions.py", line 67, in open_buy
+    res = con.open_trade(symbol=symbol, amount=amount, is_buy=True, is_in_pips=False, time_in_force='GTC', order_type='AtMarket', limit=limit, stop=stop)
+NameError: name 'con' is not defined
